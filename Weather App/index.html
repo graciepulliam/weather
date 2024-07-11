@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="search-bar-container">
+        <input class="city-input" type="text" placeholder="Enter a city" />
+        <button class="btn-search" type="button">
+          <i class="material-icons">search</i>
+        </button>
+      </div>
+      <div class="weather-container">
+        <img src="icons/01d.png" class="weather-icon" />
+        <h1 class="city-display">Fort Worth</h1>
+        <h2 class="temperature">80</h2>
+        <!-- <h2 class="description">partly cloudy</h2> -->
+        <div class="humid-and-wind">
+          <div class="wind-container">
+            <div class="icon-and-val">
+              <img src="icons/humid.png" class="icon" />
+              <h2 class="humidity">80%</h2>
+            </div>
+            <h2 class="description">Humidity</h2>
+          </div>
+          <div class="wind-container">
+            <div class="icon-and-val">
+              <img src="icons/wind.png" class="icon" />
+              <h2 class="wind">12 mph</h2>
+            </div>
+
+            <h2 class="description">Wind Speed</h2>
+          </div>
+        </div>
+
+        <!-- <h2 class="humidity">humidity</h2> -->
+      </div>
+    </div>
+  </body>
+</html>
