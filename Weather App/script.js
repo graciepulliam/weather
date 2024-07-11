@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const apiUrl =
     "https://api.openweathermap.org/data/2.5/weather?units=imperial";
 
+  checkWeather("alaska");
   async function checkWeather(city) {
     const response = await fetch(apiUrl + `&q=${city}&appid=${apiKey}`);
     var data = await response.json();
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cityName.textContent = data.name;
     temp.textContent = `${Math.trunc(data.main.temp)}\u00B0F`;
     humidity.textContent = `${data.main.humidity}%`;
-    wind.textContent = `${data.wind.speed} mph`;
+    wind.textContent = `${Math.round(data.wind.speed)} mph`;
 
     // const icon = data.weather[0].icon;
     icon.src = `icons/${data.weather[0].icon}.png`;
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   searchBtn.addEventListener("click", function () {
     const city = searchInput.value;
+    searchInput.value = "";
     if (city) {
       checkWeather(String(city));
     }
